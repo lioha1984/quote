@@ -2,19 +2,15 @@ package telran.java2022.quote.service;
 
 
 import telran.java2022.quote.dto.DatePeriodDto;
+import telran.java2022.quote.dto.PriceDto;
 import telran.java2022.quote.dto.QuoteDto;
-import telran.java2022.quote.dto.QuoteUpdateDto;
 
 public interface QuoteService {
-	Boolean addQuote(QuoteDto quoteDto);
+	QuoteDto findQuote(String name);
 	
-	QuoteDto removeQuote(String date);
-	
-	QuoteDto updateQuote(String date, QuoteUpdateDto quoteUpdateDto);
-	
-	QuoteDto findQuote(String date);
-	
-	Iterable<QuoteDto> findBetweenDates(DatePeriodDto datePeriodDto);
+	Iterable<PriceDto> findBetweenDates(String name, DatePeriodDto datePeriodDto);
+
+	PriceDto findByOpen(String name, double open);
 	
 	
 }

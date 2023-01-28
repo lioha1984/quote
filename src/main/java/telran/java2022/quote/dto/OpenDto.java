@@ -5,12 +5,13 @@ import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import telran.java2022.quote.model.Price;
-
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-public class QuoteDto {
-	String nameQuote;
+public class OpenDto {
 	List<Price> prices;
+
 }
